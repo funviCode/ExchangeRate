@@ -52,5 +52,7 @@ func main() {
 		}
 
 	}
+	fmt.Println("Нажмите Enter чтобы закрыть...")
+	_, _ = fmt.Scanln() // Ждет нажатия Enter
 
 }

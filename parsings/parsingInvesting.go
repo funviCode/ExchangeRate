@@ -4,12 +4,14 @@ import (
 	"github.com/PuerkitoBio/goquery"
 	"log"
 	"net/http"
+	"time"
 )
 
 func AllParsingInvesting(url, selector string) (string, error) {
 	// Создаем HTTP-клиент
-	client := &http.Client{}
-
+	client := &http.Client{
+		Timeout: 10 * time.Second, // Прервет запрос через 10 секунд
+	}
 	// Создаем HTTP-запрос
 	req, err := http.NewRequest("GET", url, nil)
 	if err != nil {
