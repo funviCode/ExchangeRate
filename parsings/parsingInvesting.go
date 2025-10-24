@@ -64,5 +64,4 @@ func AllParsingInvesting(url, selector string) (string, error) {
 	// Извлекаем текст из элемента
 	//text := element.Text()
 	return element.Text(), nil
-
 }
